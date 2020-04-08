@@ -1,0 +1,32 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+
+@media(min-width: 768px) {
+    .mobile-menu-btn{
+        display: none;
+    }
+    header {
+       
+        .bell {
+            display: flex;
+           
+        }
+    }
+
+    .desktop-nav{
+        display: block;
+    }
+
+    .mobile-nav{
+        display: none;
+    }
+
+
+}
+
+
+@media(min-width: 1024px) {}
