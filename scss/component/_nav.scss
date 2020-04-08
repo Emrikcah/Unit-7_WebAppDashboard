@@ -1,0 +1,38 @@
+nav {
+    img {
+        width: 40px;
+    }
+}
+
+// Do not display on mobile view
+.desktop-nav {
+    display: none;
+    background: royalblue;
+}
+
+.mobile-nav {
+    background:$nav-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-right: #000 1px solid;
+    // opacity: 0.9;
+    padding: 30px;
+    transform: translateX(-500px);
+
+    a{
+        display: block;
+        padding-bottom: 15px;
+    }
+
+    .mobile-nav-profile{
+        display: flex;
+        font-size: 14px;
+    }
+}
+
+.mobile-nav.show{
+    transform: translateX(0);
+}

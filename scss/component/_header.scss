@@ -1,0 +1,18 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    background: $primary-color;
+    height: 50px;
+
+    .bell{
+        display: none;
+    }
+
+    .bell-icon{
+        width: 20px;
+    }
+
+    .profile{
+        width: 30px;
+    }
+}
