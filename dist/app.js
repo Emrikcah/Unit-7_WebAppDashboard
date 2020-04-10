@@ -6,3 +6,4 @@ const mobileNav = document.querySelector('.mobile-nav');
 btn.addEventListener('click',() =>{
     mobileNav.classList.toggle('show');
 });
+// Mobile menu end

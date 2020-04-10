@@ -1,13 +1,14 @@
 nav {
     img {
-        width: 40px;
+        width: 30px;
     }
 }
 
 // Do not display on mobile view
 .desktop-nav {
     display: none;
-    background: royalblue;
+    background: $nav-color;
+    // height: 50px;
 }
 
 .mobile-nav {

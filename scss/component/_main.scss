@@ -1,0 +1,45 @@
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .dashboard-title {
+        border-right: 2px solid red;
+        padding: 25px 20px;
+    }
+
+    .dashboard-search {
+        position: relative;
+        width: 350px;
+        height: 50%;
+       
+    }
+
+    .input {
+        border: 1px solid gray;
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        padding-left: 20px;
+        padding-right: 35px;
+        color: red;
+        border-radius: 5px;
+    }
+
+    .fas {
+        position: absolute;
+        bottom: 3;
+        right: 0;
+        color: green;
+        cursor: pointer;
+    }
+}
+
+
+.social-stats {
+
+    // .social-image{
+    //     width: 30px;
+    // }
+}
