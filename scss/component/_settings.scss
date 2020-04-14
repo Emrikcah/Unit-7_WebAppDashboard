@@ -1,0 +1,99 @@
+.settings {
+    h3 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    input[type=checkbox] {
+        display: none;
+
+    }
+
+    input[type=checkbox]:checked+.switch-btn:before {
+        left: 42px;
+    }
+
+    input[type=checkbox]:checked+.switch-btn {
+        background: red;
+    }
+
+    label,
+    select,
+    button {
+        margin-bottom: 10px;
+    }
+
+    select {
+        background: $grayish;
+        padding: 9px;
+        border-radius: 5px;
+        display: block;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+
+        p,
+        .switch {
+            text-align: center;
+        }
+    }
+
+    select,
+    .settings-button {
+        width: 250px;
+        // width: 100%;
+        padding-top: 20px;
+
+        .button-primary,
+        .button-disabled {
+            @extend %btn;
+            width: 100%;
+        }
+
+        .button-disabled {
+            background: grey;
+        }
+
+        .button-primary {
+            margin-right: 30px;
+        }
+    }
+
+    .switch-btn {
+        width: 80px;
+        height: 30px;
+        background: #e5e5e5;
+        position: relative;
+        border-radius: 20px;
+        cursor: pointer;
+        padding-bottom: 10px;
+
+        &:after {
+            content: 'On';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            background: #fff;
+            left: 2px;
+            top: 2px;
+            border-radius: 50%;
+            transition: all 150ms ease-out;
+            z-index: 1;
+        }
+    }
+}

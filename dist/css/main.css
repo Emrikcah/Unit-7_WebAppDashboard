@@ -1,3 +1,25 @@
+.msg .button-primary, .settings select .button-primary,
+.settings select .button-disabled,
+.settings .settings-button .button-primary,
+.settings .settings-button .button-disabled {
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #7477bf;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.msg .button-primary:hover, .settings select .button-primary:hover,
+.settings select .button-disabled:hover,
+.settings .settings-button .button-primary:hover,
+.settings .settings-button .button-disabled:hover {
+  opacity: 0.8;
+}
+
 .mobile-menu-btn {
   position: absolute;
   top: 10px;
@@ -16,9 +38,45 @@
   padding: 0;
 }
 
+h3 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #7477bf;
+}
+
 .profile-image {
   width: 50px;
   border-radius: 50%;
+  margin-right: 10px;
+}
+
+.traffic,
+.daily-traffic,
+.mobile,
+.social-stats,
+.new-members,
+.recent,
+.msg,
+.settings {
+  padding: 20px;
+  border: 2px solid red;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header {
@@ -124,6 +182,226 @@ nav img {
   cursor: pointer;
 }
 
+.social-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-stats .social-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 250px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 3px;
+  background: #fbfbfb;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 14px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 14px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-stats .social-image {
+  margin-right: 10px;
+}
+
+.social-stats .social-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3rem;
+}
+
+.social-stats .social-title {
+  color: #7477bf;
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin-bottom: -10px;
+}
+
+.new-members,
+.recent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.new-members .members-container,
+.new-members .recent-container,
+.recent .members-container,
+.recent .recent-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.new-members .members-container p,
+.new-members .recent-container p,
+.recent .members-container p,
+.recent .recent-container p {
+  margin-left: auto;
+}
+
+.new-members .mem-date,
+.recent .mem-date {
+  display: none;
+}
+
+.recent i {
+  display: none;
+  margin-left: auto;
+}
+
+.msg {
+  padding-top: 20px;
+}
+
+.msg input,
+.msg textarea,
+.msg button {
+  width: 250px;
+  padding: 9px;
+  border-radius: 5px;
+}
+
+.msg .widget-container > * {
+  margin: 15px;
+}
+
+.settings h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.settings p {
+  margin-bottom: 10px;
+}
+
+.settings input[type=checkbox] {
+  display: none;
+}
+
+.settings input[type=checkbox]:checked + .switch-btn:before {
+  left: 42px;
+}
+
+.settings input[type=checkbox]:checked + .switch-btn {
+  background: red;
+}
+
+.settings label,
+.settings select,
+.settings button {
+  margin-bottom: 10px;
+}
+
+.settings select {
+  background: #fbfbfb;
+  padding: 9px;
+  border-radius: 5px;
+  display: block;
+}
+
+.settings .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
+}
+
+.settings .flex p,
+.settings .flex .switch {
+  text-align: center;
+}
+
+.settings select,
+.settings .settings-button {
+  width: 250px;
+  padding-top: 20px;
+}
+
+.settings select .button-primary,
+.settings select .button-disabled,
+.settings .settings-button .button-primary,
+.settings .settings-button .button-disabled {
+  width: 100%;
+}
+
+.settings select .button-disabled,
+.settings .settings-button .button-disabled {
+  background: grey;
+}
+
+.settings select .button-primary,
+.settings .settings-button .button-primary {
+  margin-right: 30px;
+}
+
+.settings .switch-btn {
+  width: 80px;
+  height: 30px;
+  background: #e5e5e5;
+  position: relative;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.settings .switch-btn:after {
+  content: 'On';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.settings .switch-btn:before {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: #fff;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
+  z-index: 1;
+}
+
 .grid {
   display: -ms-grid;
   display: grid;
@@ -169,50 +447,78 @@ main {
     -ms-grid-columns: 50%;
         grid-template-columns: 50%;
   }
-  .dashboard-header {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1 / span 2;
-  }
-  .traffic {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1 /span 2;
-  }
+  .dashboard-header,
+  .traffic,
   .social-stats {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1 / span 2;
   }
-  .daily-traffic {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1 / span 1;
-  }
-  .new-members {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1 / span 1;
-  }
+  .daily-traffic,
+  .new-members,
   .msg {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / span 1;
   }
-  .mobile {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / span 1;
-  }
-  .recent {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / span 1;
-  }
+  .mobile,
+  .recent,
   .settings {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2 / span 1;
+  }
+  .social-stats .flex-row {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .new-members .mem-date {
+    display: block;
+  }
+  .recent .recent-text {
+    margin-right: 20px;
+  }
+  .recent i {
+    display: block;
+  }
+  .msg input,
+  .msg textarea,
+  .msg button {
+    width: 100%;
+  }
+  .settings h3 {
+    text-align: left;
+  }
+  .settings .flex {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+  }
+  .settings .flex p {
+    margin-right: 20px;
+  }
+  .settings select,
+  .settings .settings-button {
+    width: 100%;
+  }
+  .settings .settings-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .mobile-nav {
     display: none;

@@ -1,0 +1,29 @@
+//New members and Recent activity
+.new-members,
+.recent {
+    display: flex;
+    flex-direction: column;
+
+    .members-container,
+    .recent-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        p {
+            margin-left: auto;
+        }
+    }
+
+    .mem-date{
+        display: none;
+    }
+}
+
+// Recent Activity
+.recent {
+    i {
+        display: none;
+        margin-left: auto;
+    }
+}

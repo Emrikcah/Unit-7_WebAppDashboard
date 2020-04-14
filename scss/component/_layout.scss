@@ -36,47 +36,109 @@ main {
         display: block;
     }
 
-    main{
+    main {
         display: grid;
         grid-template-columns: 50%;
     }
 
-    .dashboard-header{
+    .dashboard-header,
+    .traffic,
+    .social-stats {
         grid-column: 1 / span 2;
     }
 
-    .traffic{
-        grid-column: 1 /span 2;
-    }
 
-    .social-stats{
-        grid-column: 1 / span 2;
-    }
-
-    .daily-traffic{
-        grid-column: 1 / span 1;
-    }
-    .new-members{
-        grid-column: 1 / span 1;
-    }
-    .msg{
+    .daily-traffic,
+    .new-members,
+    .msg {
         grid-column: 1 / span 1;
     }
 
-    .mobile{
-        grid-column:  2 / span 1;
-    }
-    .recent{
-        grid-column:  2 / span 1;
-    }
-    .settings{
-        grid-column:  2 / span 1;
+    .mobile,
+    .recent,
+    .settings {
+        grid-column: 2 / span 1;
     }
 
-    // main{
-    //     display: grid;
-    //     grid-template-columns: 1fr;
-    // }
+    //Social stats
+    .social-stats {
+
+        .flex-row {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+    }
+
+    //New members 
+    .new-members {
+
+        .mem-date {
+            display: block;
+        }
+    }
+
+    // Recent Activity
+    .recent {
+
+        .recent-text {
+            margin-right: 20px;
+        }
+
+        i {
+
+            display: block;
+        }
+    }
+
+
+    //Message
+    .msg {
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+        }
+    }
+
+
+    // Settings
+    .settings {
+
+        // width: 80%;
+        h3 {
+            text-align: left;
+        }
+
+        .flex {
+            width: 100%;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: left;
+
+            p {
+                margin-right: 20px;
+            }
+
+        }
+
+        select,
+        .settings-button {
+            width: 100%;
+        }
+
+        .settings-button {
+            display: flex;
+        }
+    }
+
+
+
+
+
 
 
     //  not displaying at this breakpoint and up
