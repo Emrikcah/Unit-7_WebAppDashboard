@@ -22,15 +22,25 @@ nav {
     // opacity: 0.9;
     padding: 30px;
     transform: translateX(-500px);
+    z-index: 1;
 
-    a{
-        display: block;
-        padding-bottom: 15px;
+    .nav-icons{
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        img{
+            width: 50px;
+        }
     }
 
     .mobile-nav-profile{
         display: flex;
         font-size: 14px;
+        margin-bottom: 50px;
+                
     }
 }
 

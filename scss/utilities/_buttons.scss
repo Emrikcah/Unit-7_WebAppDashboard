@@ -16,9 +16,11 @@
 
 .mobile-menu-btn{
     position: absolute;
-    top: 10px;
+    top: 25px;
     right: 30px;
     cursor: pointer;
+    font-size: 15px;
+    color: $white;
 
     &:hover{
         opacity: 0.5;

@@ -1,0 +1,21 @@
+.traffic {
+    
+    .traffic-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        
+        .traffic-nav {
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        .traffic-nav-link {
+            text-transform: capitalize;
+            display: inline-block;
+            padding: 0px 10px;
+        }
+    }
+
+}

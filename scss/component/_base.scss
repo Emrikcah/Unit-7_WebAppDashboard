@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
 h3{
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -30,7 +34,19 @@ a{
 .msg,
 .settings{
     padding: 20px;
-    border: 2px solid red;
+    border: 1px solid red;
+}
+
+.traffic,.daily-traffic,.mobile{
+    padding: 25px;
+}
+
+.mb-3{
+    margin-bottom: 30px;
+}
+
+.text-center{
+    text-align: center;
 }
 
 .flex-center {
@@ -38,3 +54,4 @@ a{
     flex-direction: column;
     align-items: center;
 }
+
