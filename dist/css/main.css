@@ -710,7 +710,7 @@ main {
     position: fixed;
     z-index: 1;
     top: 0;
-    width: 1400px;
+    width: 100%;
   }
   .grid .desktop-nav {
     position: fixed;
