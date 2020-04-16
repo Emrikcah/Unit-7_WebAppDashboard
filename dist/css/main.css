@@ -1,3 +1,23 @@
+.bell {
+  display: none;
+}
+
+.bell .bell-icon {
+  width: 30px;
+  position: relative;
+}
+
+.bell .bell-icon #notifications {
+  position: absolute;
+  background: #39ff14;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 9px;
+  top: -8px;
+  right: -7px;
+}
+
 .msg .button-primary, .settings select .button-primary,
 .settings select .button-disabled,
 .settings .settings-button .button-primary,
@@ -108,6 +128,8 @@ header {
       -ms-flex-align: center;
           align-items: center;
   background: #7477bf;
+  max-width: 100%;
+  height: 90px;
   padding: 20px;
 }
 
@@ -122,14 +144,6 @@ header h1 .app {
 
 header h1 .trade {
   font-size: 15px;
-}
-
-header .bell {
-  display: none;
-}
-
-header .bell-icon {
-  width: 30px;
 }
 
 header .profile {
@@ -151,6 +165,7 @@ nav img {
   top: 0;
   left: 0;
   width: 50%;
+  max-width: 219px;
   height: 100%;
   border-right: #000 1px solid;
   padding: 30px;
@@ -197,9 +212,9 @@ nav img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -210,12 +225,12 @@ nav img {
   border-right: 2px solid red;
   padding: 25px 20px;
   display: none;
+  text-transform: capitalize;
 }
 
 .dashboard-header .dashboard-search {
   position: relative;
   width: 350px;
-  display: block;
 }
 
 .dashboard-header .input {
@@ -236,6 +251,30 @@ nav img {
   right: 1px;
   font-size: 25px;
   color: #7477bf;
+}
+
+.dashboard-header .alert {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.dashboard-header .alert-banner {
+  width: 100%;
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #fff;
+  background: #7477bf;
+}
+
+.dashboard-header .alert-banner-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .75rem 1.25rem;
 }
 
 .traffic .traffic-header {
@@ -669,7 +708,14 @@ main {
         grid-template-columns: 100px 1fr;
         grid-template-areas: "h h" "n main";
   }
+  .grid header {
+    position: fixed;
+    z-index: 1;
+  }
   .grid .desktop-nav {
+    position: fixed;
+    top: 90px;
+    width: 100px;
     height: calc(100vh - 90px);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -687,5 +733,8 @@ main {
   }
   .grid .desktop-nav img {
     padding-bottom: 30px;
+  }
+  .grid main {
+    padding-top: 100px;
   }
 }

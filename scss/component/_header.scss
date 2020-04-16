@@ -1,33 +1,28 @@
-header{
+header {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: $primary-color;
     
+    max-width: 100%;
+    height: 90px;
     padding: 20px;
 
-    h1{
+    h1 {
         text-transform: capitalize;
         color: $white;
 
-        .app{
+        .app {
             font-weight: 200;
         }
 
-        .trade{
+        .trade {
             font-size: 15px;
         }
     }
 
-    .bell{
-        display: none;
-    }
-
-    .bell-icon{
-        width: 30px;
-    }
-
-    .profile{
+    .profile {
         width: 30px;
     }
 }

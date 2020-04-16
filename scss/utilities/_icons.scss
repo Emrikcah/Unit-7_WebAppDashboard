@@ -1,0 +1,21 @@
+.bell {
+    display: none;
+
+
+    .bell-icon {
+        width: 30px;
+        position: relative;
+
+        #notifications {
+            position: absolute;
+            background: $neon-green;
+            color: $white;
+            border-radius: 50%;
+            padding: 2px 5px;
+            font-size: 9px;
+            top: -8px;
+            right: -7px;
+        }
+    }
+
+}

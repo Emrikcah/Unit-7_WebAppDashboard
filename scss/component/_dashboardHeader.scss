@@ -1,20 +1,25 @@
 .dashboard-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
+    
+    
+    
 
 
     .dashboard-title {
         border-right: 2px solid red;
         padding: 25px 20px;
         display: none;
+        text-transform: capitalize;
+       
     }
 
     .dashboard-search {
         position: relative;
         width: 350px;
-        display: block;
+        
 
     }
 
@@ -36,4 +41,29 @@
         font-size: 25px;
         color: $primary-color;
     }
+
+    .alert{
+        // align-self: flex-end;
+        order: 1;
+    }
+
+    .alert-banner{
+        width: 100%;
+        position: relative;
+        padding: .75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        color: $white;
+        background: $primary-color;
+
+        &-close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: .75rem 1.25rem;
+        }
+    }
+
 }
+

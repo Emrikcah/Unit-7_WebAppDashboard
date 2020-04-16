@@ -205,7 +205,16 @@ main {
             "n main"
         ;
 
+        header{
+            position: fixed;
+            z-index: 1;
+            
+        }
+
         .desktop-nav {
+            position: fixed;
+            top: 90px;
+           width: 100px;
            height: calc(100vh - 90px);
            display: flex;
            flex-direction: column;
@@ -217,6 +226,10 @@ main {
             }
             
 
+        }
+
+        main{
+            padding-top: 100px;
         }
         
 

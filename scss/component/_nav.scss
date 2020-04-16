@@ -6,6 +6,7 @@ nav {
 
 // Do not display on mobile view
 .desktop-nav {
+    
     display: none;
     background: $nav-color;
     // height: 50px;
@@ -17,13 +18,14 @@ nav {
     top: 0;
     left: 0;
     width: 50%;
+    max-width: 219px;
     height: 100%;
     border-right: #000 1px solid;
     // opacity: 0.9;
     padding: 30px;
     transform: translateX(-500px);
     z-index: 1;
-
+    
     .nav-icons{
         height: 30vh;
         display: flex;
@@ -46,4 +48,5 @@ nav {
 
 .mobile-nav.show{
     transform: translateX(0);
+    
 }
