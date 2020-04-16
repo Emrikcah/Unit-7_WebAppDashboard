@@ -252,8 +252,9 @@ nav img {
   color: #7477bf;
 }
 
-.dashboard-header #alert {
+.dashboard-header .alert {
   display: block;
+  width: 100%;
 }
 
 .dashboard-header .alert-banner {
@@ -527,7 +528,7 @@ nav img {
   position: relative;
   display: -ms-grid;
   display: grid;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
@@ -708,6 +709,8 @@ main {
   .grid header {
     position: fixed;
     z-index: 1;
+    top: 0;
+    width: 1400px;
   }
   .grid .desktop-nav {
     position: fixed;
