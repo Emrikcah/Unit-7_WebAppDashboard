@@ -156,6 +156,10 @@ canvas {
   border: thin solid grey;
 }
 
+.traffic {
+  border-top: none;
+}
+
 .traffic,
 .mobile,
 .social-stats,
@@ -884,9 +888,7 @@ main {
     padding-bottom: 30px;
   }
   .grid .widget-container-full {
-    width: 65vw;
-    margin: auto;
-    position: relative;
+    width: 70vw;
   }
   .grid .widget-container-half {
     width: 32.5vw;

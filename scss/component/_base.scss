@@ -19,7 +19,7 @@ a {
     color: $primary-color;
 }
 
-canvas{
+canvas {
     max-width: 100vw;
 }
 
@@ -44,6 +44,10 @@ canvas{
 
 }
 
+.traffic {
+    border-top: none;
+}
+
 .traffic,
 .mobile,
 .social-stats,
@@ -52,6 +56,7 @@ canvas{
     border-left: none;
     border-right: none;
 }
+
 
 .traffic,
 .daily-traffic,
@@ -81,4 +86,3 @@ canvas{
     flex-direction: column;
     align-items: center;
 }
-
