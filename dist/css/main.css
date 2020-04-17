@@ -377,11 +377,7 @@ nav img {
   position: absolute;
   top: 0;
   right: 0;
-  padding: .75rem 1.25rem;
-}
-
-.traffic .alert-banner .alert-banner-close {
-  background: #6366b7;
+  padding: .755rem 1.25rem;
 }
 
 .traffic .alert-banner .alert-banner-close:hover {
@@ -409,13 +405,13 @@ nav img {
 .traffic .traffic-header .traffic-nav-link {
   text-transform: capitalize;
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 0px;
   font-weight: bold;
 }
 
 .traffic .traffic-header .traffic-nav-link.active {
   background: #39ff14;
-  padding: 7px 25px 7px 25px;
+  padding: 7px 15px 7px 15px;
   color: #fff;
   border-radius: 100px;
 }
@@ -748,6 +744,9 @@ main {
   .dashboard-header .dashboard-title {
     display: block;
     padding: 30px 20px 30px 20px;
+  }
+  .traffic .alert-banner-close {
+    padding: .75rem 1.25rem;
   }
   .traffic .traffic-header {
     -webkit-box-orient: horizontal;
