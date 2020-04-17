@@ -1,4 +1,6 @@
 .traffic {
+
+   
     .alert {
         width: 100%;
         margin-bottom: 2.5rem;
@@ -49,7 +51,15 @@
         .traffic-nav-link {
             text-transform: capitalize;
             display: inline-block;
-            padding: 0px 10px;
+            padding: 0 10px;
+            font-weight: bold;
+
+            &.active{
+                background: $neon-green;
+                padding: 7px 25px 7px 25px;
+                color: $white;
+                border-radius: 100px;
+            }
         }
     }
 

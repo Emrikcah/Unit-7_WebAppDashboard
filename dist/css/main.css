@@ -134,6 +134,10 @@ a {
   color: #7477bf;
 }
 
+canvas {
+  max-width: 100vw;
+}
+
 .profile-image {
   width: 50px;
   border-radius: 50%;
@@ -152,7 +156,27 @@ a {
   border: thin solid grey;
 }
 
-.traffic, .daily-traffic, .mobile {
+.traffic,
+.mobile,
+.social-stats,
+.recent,
+.settings {
+  border-left: none;
+  border-right: none;
+}
+
+.traffic,
+.daily-traffic,
+.mobile,
+.social-stats,
+.recent,
+.new-members {
+  border-bottom: none;
+}
+
+.traffic,
+.daily-traffic,
+.mobile {
   padding: 25px;
 }
 
@@ -195,6 +219,7 @@ header {
 header h1 {
   text-transform: capitalize;
   color: #fff;
+  position: relative;
 }
 
 header h1 .app {
@@ -202,7 +227,10 @@ header h1 .app {
 }
 
 header h1 .trade {
+  position: absolute;
   font-size: 15px;
+  top: 5px;
+  right: -12px;
 }
 
 header .profile {
@@ -381,7 +409,15 @@ nav img {
 .traffic .traffic-header .traffic-nav-link {
   text-transform: capitalize;
   display: inline-block;
-  padding: 0px 10px;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.traffic .traffic-header .traffic-nav-link.active {
+  background: #39ff14;
+  padding: 7px 25px 7px 25px;
+  color: #fff;
+  border-radius: 100px;
 }
 
 .social-stats {
@@ -645,6 +681,11 @@ main {
   grid-area: main;
 }
 
+.widget-container-full,
+.widget-container-half {
+  width: 85vw;
+}
+
 @media (min-width: 768px) {
   .dashboard-header,
   .traffic,
@@ -702,7 +743,7 @@ main {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0  20px 0 0;
+    padding: 0 20px 0 0;
   }
   .dashboard-header .dashboard-title {
     display: block;
@@ -723,6 +764,15 @@ main {
   .traffic .traffic-header .traffic-nav {
     margin: 0;
   }
+  .traffic .traffic-header .traffic-nav .traffic-nav-link {
+    padding: 0px 25px;
+  }
+  .traffic .traffic-header .traffic-nav .traffic-nav-link.active {
+    background: #39ff14;
+    padding: 7px 25px 7px 25px;
+    color: #fff;
+    border-radius: 100px;
+  }
   main {
     display: -ms-grid;
     display: grid;
@@ -730,7 +780,9 @@ main {
         grid-template-columns: 50%;
   }
   .widget-container-full {
-    width: 90vw;
+    width: 80vw;
+    margin: auto;
+    position: relative;
   }
   .widget-container-half {
     width: 45vw;
@@ -831,5 +883,15 @@ main {
   }
   .grid .desktop-nav img {
     padding-bottom: 30px;
+  }
+  .grid .widget-container-full {
+    width: 65vw;
+    margin: auto;
+    position: relative;
+  }
+  .grid .widget-container-half {
+    width: 32.5vw;
+    margin: auto;
+    position: relative;
   }
 }

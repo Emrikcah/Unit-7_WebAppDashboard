@@ -1,4 +1,4 @@
-let trafficCanvas = document.getElementById('line-chart');
+let trafficCanvas = document.getElementById('line-chart').getContext('2d');
 let dailyCanvas = document.getElementById('bar-chart');
 let mobileCanvas = document.getElementById('doughnut-chart');
 

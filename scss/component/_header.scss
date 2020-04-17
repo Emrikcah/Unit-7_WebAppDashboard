@@ -9,13 +9,17 @@ header {
     h1 {
         text-transform: capitalize;
         color: $white;
+        position: relative;
 
         .app {
             font-weight: 200;
         }
 
         .trade {
+            position: absolute;
             font-size: 15px;
+            top: 5px;
+            right: -12px;
         }
     }
 

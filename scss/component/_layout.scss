@@ -25,6 +25,11 @@ main {
     grid-area: main;
 }
 
+.widget-container-full,
+.widget-container-half {
+    width: 85vw;
+}
+
 //Adapt to different screen sizes
 @media(min-width: 768px) {
 
@@ -84,7 +89,7 @@ main {
     // Dashboard header
     .dashboard-header {
         justify-content: space-between;
-        padding: 0  20px 0 0;
+        padding: 0 20px 0 0;
 
         .dashboard-title {
             display: block;
@@ -106,6 +111,17 @@ main {
 
             .traffic-nav {
                 margin: 0;
+
+                .traffic-nav-link {
+                    padding: 0px 25px;
+
+                    &.active {
+                        background: $neon-green;
+                        padding: 7px 25px 7px 25px;
+                        color: $white;
+                        border-radius: 100px;
+                    }
+                }
             }
         }
     }
@@ -118,7 +134,9 @@ main {
 
     // Widgets
     .widget-container-full {
-        width: 90vw;
+        width: 80vw;
+        margin: auto;
+           position: relative;
     }
 
     .widget-container-half {
@@ -237,14 +255,18 @@ main {
             }
         }
 
-        // // Widgets
-        // .widget-container-full {
-        //     width: 200px;
-        // }
+        // Widgets
 
-        // .widget-container-half {
-        //     width: 200px;
-        // }
+        .widget-container-full {
+            width: 65vw;
+            margin: auto;
+            position: relative;
+        }
 
+        .widget-container-half{
+            width: 32.5vw;
+            margin: auto;
+            position: relative;
+        }
     }
 }
