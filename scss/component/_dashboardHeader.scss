@@ -3,11 +3,11 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background: black;
+    background: $grayish;
 
     .dashboard-title {
-        border-right: 2px solid red;
-        padding: 25px 20px;
+        border-right: thin solid grey;
+        
         display: none;
         text-transform: capitalize;
         background: white;

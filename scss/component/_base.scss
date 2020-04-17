@@ -34,7 +34,8 @@ a{
 .msg,
 .settings{
     padding: 20px;
-    border: 1px solid red;
+    // border-width: thin;
+    border: thin solid grey;
 }
 
 .traffic,.daily-traffic,.mobile{

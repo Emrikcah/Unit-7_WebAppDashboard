@@ -24,6 +24,7 @@ nav {
     // opacity: 0.9;
     padding: 30px;
     transform: translateX(-500px);
+    transition: transform 0.8s ease-in-out;
     z-index: 1;
     
     .nav-icons{
@@ -40,8 +41,15 @@ nav {
 
     .mobile-nav-profile{
         display: flex;
+        align-items: center;
         font-size: 14px;
         margin-bottom: 50px;
+
+        h3{
+            color: $white;
+            margin-bottom: 0px;
+            text-transform: capitalize;
+        }
                 
     }
 }

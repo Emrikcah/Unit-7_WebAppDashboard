@@ -84,9 +84,12 @@ main {
     // Dashboard header
     .dashboard-header {
         justify-content: space-between;
+        padding: 0  20px 0 0;
 
         .dashboard-title {
             display: block;
+            padding: 30px 20px 30px 20px;
+
         }
     }
 
@@ -173,7 +176,7 @@ main {
             text-align: left;
         }
 
-        .flex-center{
+        .flex-center {
             align-items: flex-start;
         }
 
@@ -189,7 +192,7 @@ main {
                 // text-align: left;
             }
 
-           
+
         }
 
         select,
@@ -213,7 +216,7 @@ main {
         ;
 
         header {
-            position: fixed;
+            position: sticky;
             z-index: 1;
             top: 0;
             width: 100%;
@@ -232,10 +235,6 @@ main {
             img {
                 padding-bottom: 30px;
             }
-        }
-
-        main {
-            padding-top: 90px;
         }
 
         // // Widgets
