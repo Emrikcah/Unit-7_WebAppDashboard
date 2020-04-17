@@ -47,6 +47,7 @@
   cursor: pointer;
   font-size: 15px;
   color: #fff;
+  z-index: 1;
 }
 
 .mobile-menu-btn:hover {
@@ -165,7 +166,7 @@ nav img {
   left: 0;
   width: 50%;
   max-width: 219px;
-  height: 100%;
+  height: 100vh;
   border-right: #000 1px solid;
   padding: 30px;
   -webkit-transform: translateX(-500px);
@@ -211,13 +212,14 @@ nav img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
+  background: black;
 }
 
 .dashboard-header .dashboard-title {
@@ -225,6 +227,7 @@ nav img {
   padding: 25px 20px;
   display: none;
   text-transform: capitalize;
+  background: white;
 }
 
 .dashboard-header .dashboard-search {
@@ -252,12 +255,12 @@ nav img {
   color: #7477bf;
 }
 
-.dashboard-header .alert {
-  display: block;
+.traffic .alert {
   width: 100%;
+  margin-bottom: 2.5rem;
 }
 
-.dashboard-header .alert-banner {
+.traffic .alert-banner {
   width: 100%;
   position: relative;
   padding: .75rem 1.25rem;
@@ -267,7 +270,7 @@ nav img {
   background: #7477bf;
 }
 
-.dashboard-header .alert-banner-close {
+.traffic .alert-banner-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -326,7 +329,7 @@ nav img {
   padding: 20px;
   background: #fff;
   border-radius: 3px;
-  background: #fbfbfb;
+  background: #fbfbfb83;
   margin-bottom: 20px;
   -webkit-box-shadow: 0 14px 8px rgba(0, 0, 0, 0.2);
           box-shadow: 0 14px 8px rgba(0, 0, 0, 0.2);
@@ -430,7 +433,7 @@ nav img {
 }
 
 .settings select {
-  background: #fbfbfb;
+  background: #fbfbfb83;
   padding: 9px;
   border-radius: 5px;
   display: block;
@@ -447,7 +450,7 @@ nav img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 200px;
+  width: 100%;
 }
 
 .settings select,
@@ -485,7 +488,7 @@ nav img {
   background: #7477bf;
 }
 
-.settings .switch .checkbox:checked + .switch-btn:after {
+.settings .switch input[type=checkbox]:checked + .switch-btn:after {
   content: 'ON';
 }
 
@@ -515,7 +518,7 @@ nav img {
 }
 
 .settings .switch .switch-btn:after {
-  content: 'Off';
+  content: 'OFF';
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -672,22 +675,26 @@ main {
   .settings h3 {
     text-align: left;
   }
+  .settings .flex-center {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
   .settings .flex {
-    width: 100%;
+    width: 60%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    text-align: left;
   }
   .settings .flex p {
-    margin-right: 20px;
+    margin-right: 10px;
   }
   .settings select,
   .settings .settings-button {
@@ -713,7 +720,8 @@ main {
     width: 100%;
   }
   .grid .desktop-nav {
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     top: 90px;
     width: 100px;
     height: calc(100vh - 90px);
@@ -735,6 +743,6 @@ main {
     padding-bottom: 30px;
   }
   .grid main {
-    padding-top: 100px;
+    padding-top: 90px;
   }
 }

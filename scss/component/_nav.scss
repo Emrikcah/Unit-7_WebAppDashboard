@@ -11,7 +11,7 @@ nav {
     background: $nav-color;
     // height: 50px;
 }
-
+//mobile nav is not functioning properly now. dont know what changed
 .mobile-nav {
     background:$nav-color;
     position: absolute;
@@ -19,7 +19,7 @@ nav {
     left: 0;
     width: 50%;
     max-width: 219px;
-    height: 100%;
+    height: 100vh;
     border-right: #000 1px solid;
     // opacity: 0.9;
     padding: 30px;
