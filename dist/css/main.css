@@ -169,6 +169,12 @@ canvas {
   border-right: none;
 }
 
+.daily-traffic,
+.new-members,
+.msg {
+  border-left: none;
+}
+
 .traffic,
 .daily-traffic,
 .mobile,

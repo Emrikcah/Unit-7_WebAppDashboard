@@ -45,7 +45,7 @@ canvas {
 }
 
 .traffic {
-    border-top: none;
+    border-top: thin solid grey;
 }
 
 .traffic,
@@ -55,6 +55,12 @@ canvas {
 .settings {
     border-left: none;
     border-right: none;
+}
+
+.daily-traffic,
+.new-members,
+.msg{
+    border-left: none;
 }
 
 
