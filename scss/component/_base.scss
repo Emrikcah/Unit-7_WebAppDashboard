@@ -28,6 +28,7 @@ canvas {
     width: 50px;
     border-radius: 50%;
     margin-right: 10px;
+    display: none;
 }
 
 .traffic,
@@ -52,7 +53,7 @@ canvas {
 .mobile,
 .social-stats,
 .recent,
-.settings {
+.settings{
     border-left: none;
     border-right: none;
 }
@@ -69,8 +70,13 @@ canvas {
 .mobile,
 .social-stats,
 .recent,
-.new-members {
+.new-members,
+.msg {
     border-bottom: none;
+}
+
+.msg,.new-members,.daily-traffic{
+    border-right: none;
 }
 
 .traffic,

@@ -53,6 +53,15 @@ main {
     grid-column: 2 / span 1;
   }
 
+  //add borders
+  .msg,.new-members,.daily-traffic{
+      border-right: thin solid grey;
+  }
+
+  .profile-image{
+      display: block;
+  }
+
   // Header
   header {
     .bell {
@@ -174,11 +183,6 @@ main {
   }
 
   //New members
-  .new-members {
-    .mem-date {
-      display: block;
-    }
-  }
 
   // Recent Activity
   .recent {
@@ -268,12 +272,23 @@ main {
       }
     }
 
+    //new members
+    .new-members {
+      .members-text {
+        //   width: 100%;
+        margin-right: 20px;
+      }
+      .mem-date {
+        display: block;
+      }
+    }
+
     // Widgets
 
     .widget-container-full {
-      width: 70vw;
-      // margin: auto;
-      // position: relative;
+      width: 65vw;
+    //   margin: auto;
+    //   position: relative;
     }
 
     .widget-container-half {

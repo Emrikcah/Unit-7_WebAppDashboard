@@ -1,29 +1,28 @@
 //New members and Recent activity
 .new-members,
 .recent {
-    display: flex;
-    flex-direction: column;
-
-    .members-container,
-    .recent-container {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-
-        p {
-            margin-left: auto;
-        }
-    }
-
-    .mem-date{
-        display: none;
-    }
+  display: flex;
+  flex-direction: column;
 }
+
+  .members-container,
+  .recent-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .mem-date {
+    display: none;
+    margin-left: auto;
+  }
 
 // Recent Activity
 .recent {
-    i {
-        display: none;
-        margin-left: auto;
-    }
+  i {
+    display: none;
+    margin-left: auto;
+  }
 }
+
+

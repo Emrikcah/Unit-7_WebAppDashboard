@@ -109,6 +109,7 @@ canvas {
   width: 50px;
   border-radius: 50%;
   margin-right: 10px;
+  display: none;
 }
 
 .traffic,
@@ -147,8 +148,13 @@ canvas {
 .mobile,
 .social-stats,
 .recent,
-.new-members {
+.new-members,
+.msg {
   border-bottom: none;
+}
+
+.msg, .new-members, .daily-traffic {
+  border-right: none;
 }
 
 .traffic,
@@ -404,25 +410,16 @@ nav img {
   flex-direction: column;
 }
 
-.new-members .members-container,
-.new-members .recent-container,
-.recent .members-container,
-.recent .recent-container {
+.members-container,
+.recent-container {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.new-members .members-container p,
-.new-members .recent-container p,
-.recent .members-container p,
-.recent .recent-container p {
-  margin-left: auto;
-}
-
-.new-members .mem-date,
-.recent .mem-date {
+.mem-date {
   display: none;
+  margin-left: auto;
 }
 
 .recent i {
@@ -594,6 +591,12 @@ main {
   .settings {
     grid-column: 2 / span 1;
   }
+  .msg, .new-members, .daily-traffic {
+    border-right: thin solid grey;
+  }
+  .profile-image {
+    display: block;
+  }
   header .bell {
     display: flex;
     align-items: center;
@@ -675,9 +678,6 @@ main {
     display: flex;
     justify-content: space-evenly;
   }
-  .new-members .mem-date {
-    display: block;
-  }
   .recent .recent-text {
     margin-right: 20px;
   }
@@ -740,8 +740,14 @@ main {
   .grid .desktop-nav img {
     padding-bottom: 30px;
   }
+  .grid .new-members .members-text {
+    margin-right: 20px;
+  }
+  .grid .new-members .mem-date {
+    display: block;
+  }
   .grid .widget-container-full {
-    width: 70vw;
+    width: 65vw;
   }
   .grid .widget-container-half {
     width: 32.5vw;
