@@ -1,68 +1,63 @@
 .traffic {
+  border-top: 1px solid gray;
 
-    border: 1px solid red;
-   
-    .alert {
-        width: 100%;
-        margin-bottom: 2.5rem;
+  .alert {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .alert-banner {
+    p:not(.alert-banner-close) {
+      width: 90%;
     }
 
-    .alert-banner {
+    width: 100%;
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    // margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: $white;
+    background: $primary-color;
 
-        p:not(.alert-banner-close) {
-            width: 90%;
-        }
+    &-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.755rem 1.25rem;
+    }
 
-        width: 100%;
-        position: relative;
-        padding: .75rem 1.25rem;
-        // margin-bottom: 1rem;
-        border: 1px solid transparent;
-        border-radius: .25rem;
+    .alert-banner-close {
+      // background: $primary-color-btn;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .traffic-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .traffic-nav {
+      margin: 0 auto;
+      list-style: none;
+    }
+
+    .traffic-nav-link {
+      text-transform: capitalize;
+      display: inline-block;
+      padding: 0 0px;
+      font-weight: bold;
+
+      &.active {
+        background: $neon-green;
+        padding: 7px 15px 7px 15px;
         color: $white;
-        background: $primary-color;
-
-        &-close {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: .755rem 1.25rem;
-        }
-
-        .alert-banner-close{
-            // background: $primary-color-btn;
-            
-
-            &:hover{
-                cursor: pointer;
-            }
-        }
+        border-radius: 100px;
+      }
     }
-
-    .traffic-header {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-
-        .traffic-nav {
-            margin: 0 auto;
-            list-style: none;
-        }
-
-        .traffic-nav-link {
-            text-transform: capitalize;
-            display: inline-block;
-            padding: 0 0px;
-            font-weight: bold;
-
-            &.active{
-                background: $neon-green;
-                padding: 7px 15px 7px 15px;
-                color: $white;
-                border-radius: 100px;
-            }
-        }
-    }
-
+  }
 }

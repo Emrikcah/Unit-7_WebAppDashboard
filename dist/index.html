@@ -1,295 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ChartJs Cdn-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <!-- Font Awesome Cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:200,400&display=swap"
+      rel="stylesheet"
+    />
     <!-- my styles -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="mobile-menu-btn">
-        <i class="fas fa-bars fa-2x"></i>
+      <i class="fas fa-bars fa-2x"></i>
     </div>
     <div class="grid">
-        <header>
-            <h1>Your<span class="app">App</span><span class="app trade">&trade;</span></h1>
-            <div class="bell">
-                <div class="bell-icon">
-                    <img src="icons/icon-bell.svg" alt="bell icon">
-                    <div id="notifications">6</div>
-                </div>
-                <img class="profile-image" src="images/member-4.jpg" alt="user profile picture">
-                <h3>James P. Sullivan</h3>
-            </div>
+      <header>
+        <h1>
+          Your<span class="app">App</span><span class="app trade">&trade;</span>
+        </h1>
+        <div class="bell">
+          <div class="bell-icon">
+            <img src="icons/icon-bell.svg" alt="bell icon" />
+            <div id="notifications">6</div>
+          </div>
+          <span class="separater"></span>
+          <img
+            class="profile-image"
+            src="images/member-4.jpg"
+            alt="user profile picture"
+          />
+          <h3>James P. Sullivan</h3>
+        </div>
+      </header>
+      <nav class="desktop-nav">
+        <a href="#">
+          <img src="icons/icon-dashboard.svg" alt="" />
+        </a>
+        <a href="#">
+          <img src="icons/icon-members.svg" alt="" />
+        </a>
+        <a href="#">
+          <img src="icons/icon-visits.svg" alt="" />
+        </a>
+        <a href="#">
+          <img src="icons/icon-settings.svg" alt="" />
+        </a>
+      </nav>
+      <nav class="mobile-nav">
+        <div class="mobile-nav-profile">
+          <img
+            class="profile-image"
+            src="images/member-4.jpg"
+            alt="user profile picture"
+          />
+          <h3>Sullivan</h3>
+        </div>
 
-        </header>
-        <nav class="desktop-nav">
-            <a href="#">
-                <img src="icons/icon-dashboard.svg" alt="">
-            </a>
-            <a href="#">
-                <img src="icons/icon-members.svg" alt="">
-            </a>
-            <a href="#">
-                <img src="icons/icon-visits.svg" alt="">
-            </a>
-            <a href="#">
-                <img src="icons/icon-settings.svg" alt="">
-            </a>
-        </nav>
-        <nav class="mobile-nav">
-            <div class="mobile-nav-profile">
-                <img class="profile-image" src="images/member-4.jpg" alt="user profile picture">
-                <h3>Sullivan</h3>
-            </div>
-
-
-            <div class="nav-icons">
-                <a href="#">
-                    <img src="icons/icon-dashboard.svg" alt="">
-                </a>
-                <a href="#">
-                    <img src="icons/icon-members.svg" alt="">
-                </a>
-                <a href="#">
-                    <img src="icons/icon-visits.svg" alt="">
-                </a>
-                <a href="#">
-                    <img src="icons/icon-settings.svg" alt="">
-                </a>
-            </div>
-
-        </nav>
-        <main>
-            <section class="dashboard-header">
+        <div class="nav-icons">
+          <a href="#">
+            <img src="icons/icon-dashboard.svg" alt="" />
+          </a>
+          <a href="#">
+            <img src="icons/icon-members.svg" alt="" />
+          </a>
+          <a href="#">
+            <img src="icons/icon-visits.svg" alt="" />
+          </a>
+          <a href="#">
+            <img src="icons/icon-settings.svg" alt="" />
+          </a>
+        </div>
+      </nav>
+      <main>
+        <section class="dashboard-header">
+            <div class="title-container">
                 <h2 class="dashboard-title">dashboard</h2>
+            </div>
+          
 
-                <div class="dashboard-search">
-                    <input class="input" type="search" placeholder="Search">
-                    <i class="fas fa-search"></i>
-                </div>
+          <div class="dashboard-search">
+            <input class="input" type="search" placeholder="Search" />
+            <i class="fas fa-search"></i>
+          </div>
+        </section>
 
-            </section>
+        <section class="traffic">
+          <div id="alert" class="alert"></div>
+          <div class="traffic-header mb-3">
+            <h3>traffic</h3>
+            <ul class="traffic-nav">
+              <li class="traffic-nav-link">hourly</li>
+              <li class="traffic-nav-link">daily</li>
+              <li class="traffic-nav-link active">weekly</li>
+              <li class="traffic-nav-link">monthly</li>
+            </ul>
+          </div>
+          <div class="widget-container-full">
+            <canvas id="line-chart"></canvas>
+          </div>
+        </section>
 
-            <section class="traffic">
-                <div id="alert" class="alert"></div>
-                <div class="traffic-header mb-3">
-                    <h3>traffic</h3>
-                    <ul class="traffic-nav">
-                        <li class="traffic-nav-link">hourly</li>
-                        <li class="traffic-nav-link">daily</li>
-                        <li class="traffic-nav-link active">weekly</li>
-                        <li class="traffic-nav-link">monthly</li>
-                    </ul>
-                </div>
-                <div class="widget-container-full">
-                    <canvas id="line-chart"></canvas>
-                </div>
-            </section>
+        <section class="daily-traffic">
+          <h3 class="mb-3">daily traffic</h3>
+          <div class="widget-container-half">
+            <canvas id="bar-chart"></canvas>
+          </div>
+        </section>
 
-            <section class="daily-traffic">
-                <h3 class="mb-3">daily traffic</h3>
-                <div class="widget-container-half">
-                    <canvas id="bar-chart"></canvas>
-                </div>
-            </section>
+        <section class="mobile">
+          <h3 class="mb-3">mobile</h3>
+          <div class="widget-container-half">
+            <canvas id="doughnut-chart"></canvas>
+          </div>
+        </section>
 
-            <section class="mobile">
-                <h3 class="mb-3">mobile</h3>
-                <div class="widget-container-half">
-                    <canvas id="doughnut-chart"></canvas>
-                </div>
-            </section>
+        <section class="social-stats">
+          <h3>social stats</h3>
+          <div class="flex-row">
+            <div class="social-container">
+              <div class="social-image">
+                <svg
+                  height="67px"
+                  id="Layer_1"
+                  style="enable-background: new 0 0 67 67;"
+                  version="1.1"
+                  viewBox="0 0 67 67"
+                  width="67px"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <path
+                    d="M38.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.567  C20.775,43.256,20,43.341,20,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.674,5.657-5,6.978-8.221c0.713-1.715,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C40.766,21.902,39.131,21.944,38.167,22.283z M34,64C17.432,64,4,50.568,4,34  C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z"
+                    style="
+                      fill-rule: evenodd;
+                      clip-rule: evenodd;
+                      fill: #7477bf;
+                    "
+                  />
+                </svg>
+              </div>
+              <div class="social-text">
+                <p class="social-title">twitter</p>
+                <p>10,345</p>
+              </div>
+            </div>
+            <div class="social-container">
+              <div class="social-image">
+                <svg
+                  height="67px"
+                  id="Layer_1"
+                  style="enable-background: new 0 0 67 67;"
+                  version="1.1"
+                  viewBox="0 0 67 67"
+                  width="67px"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <path
+                    d="M29.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M34,64C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z"
+                    style="
+                      fill-rule: evenodd;
+                      clip-rule: evenodd;
+                      fill: #7477bf;
+                    "
+                  />
+                </svg>
+              </div>
+              <div class="social-text">
+                <p class="social-title">facebook</p>
+                <p>8,739</p>
+              </div>
+            </div>
+            <div class="social-container">
+              <div class="social-image">
+                <svg
+                  enable-background="new 0 0 512 512"
+                  height="60px"
+                  id="Layer_1"
+                  version="1.1"
+                  viewBox="0 0 512 512"
+                  width="60px"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <g>
+                    <path
+                      clip-rule="evenodd"
+                      d="M256.23,512C396.81,512,512,396.81,512,256.23   C512,115.184,396.81,0,256.23,0C115.184,0,0,115.184,0,256.23C0,396.81,115.184,512,256.23,512L256.23,512z"
+                      fill="#7477bf"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M274.369,280.26c-7.718-5.891-15.873-11.343-24.044-18.139   c-11.335-9.523-7.249-23.131,4.538-32.2c10.429-8.163,22.678-17.686,29.021-26.755c18.592-28.122,9.983-68.024-19.045-88.889h26.31   l28.56-18.139h-90.24c-65.306,0-114.737,24.942-110.652,85.709c2.719,41.723,40.816,64.399,87.976,59.408   c-9.976,15.881-3.172,31.754,8.616,44.44c-121.534,2.719-135.595,70.742-107.02,102.489c18.591,20.42,51.698,28.575,85.709,27.669   c40.355-0.453,82.538-14.515,101.583-41.73C312.006,350.549,322.88,316.99,274.369,280.26L274.369,280.26z M432.181,239.896   h-50.339v-48.073h-16.779v48.073h-52.15v16.334h52.15v47.604h16.779V256.23h50.339V239.896z M247.606,155.999   c11.343,29.028,9.077,63.04-21.771,72.563c-34.918,10.882-61.22-23.13-66.657-56.689c-4.086-24.49,1.813-48.526,25.396-56.689   C212.688,105.661,236.272,128.338,247.606,155.999L247.606,155.999z M136.501,339.659c6.352-33.105,46.706-41.714,93.873-41.714   c18.592,13.154,37.637,25.856,45.354,39.901c5.437,10.89,4.078,26.31-5.452,38.559c-11.78,14.498-31.739,19.951-50.784,21.311   c-35.371,1.813-64.853-12.249-77.546-28.122C135.142,360.532,134.236,350.096,136.501,339.659L136.501,339.659z"
+                      fill="#FFFFFF"
+                      fill-rule="evenodd"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="social-text">
+                <p class="social-title">google+</p>
+                <p>2,530</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <section class="social-stats">
-                <h3>social stats</h3>
-                <div class="flex-row">
-                    <div class="social-container">
-                        <div class="social-image">
-                            <svg height="67px" id="Layer_1" style="enable-background:new 0 0 67 67;" version="1.1"
-                                viewBox="0 0 67 67" width="67px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <path
-                                    d="M38.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.567  C20.775,43.256,20,43.341,20,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.674,5.657-5,6.978-8.221c0.713-1.715,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C40.766,21.902,39.131,21.944,38.167,22.283z M34,64C17.432,64,4,50.568,4,34  C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z"
-                                    style="fill-rule:evenodd;clip-rule:evenodd;fill:#7477bf;" /></svg>
-                        </div>
-                        <div class="social-text">
-                            <p class="social-title">twitter</p>
-                            <p>10,345</p>
-                        </div>
-                    </div>
-                    <div class="social-container">
-                        <div class="social-image">
-                            <svg height="67px" id="Layer_1" style="enable-background:new 0 0 67 67;" version="1.1"
-                                viewBox="0 0 67 67" width="67px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <path
-                                    d="M29.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M34,64C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z"
-                                    style="fill-rule:evenodd;clip-rule:evenodd;fill:#7477bf;" /></svg>
-                        </div>
-                        <div class="social-text">
-                            <p class="social-title">facebook</p>
-                            <p>8,739</p>
-                        </div>
-                    </div>
-                    <div class="social-container">
-                        <div class="social-image">
-                            <svg enable-background="new 0 0 512 512" height="60px" id="Layer_1" version="1.1"
-                                viewBox="0 0 512 512" width="60px" xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <g>
-                                    <path clip-rule="evenodd"
-                                        d="M256.23,512C396.81,512,512,396.81,512,256.23   C512,115.184,396.81,0,256.23,0C115.184,0,0,115.184,0,256.23C0,396.81,115.184,512,256.23,512L256.23,512z"
-                                        fill="#7477bf" fill-rule="evenodd" />
-                                    <path clip-rule="evenodd"
-                                        d="M274.369,280.26c-7.718-5.891-15.873-11.343-24.044-18.139   c-11.335-9.523-7.249-23.131,4.538-32.2c10.429-8.163,22.678-17.686,29.021-26.755c18.592-28.122,9.983-68.024-19.045-88.889h26.31   l28.56-18.139h-90.24c-65.306,0-114.737,24.942-110.652,85.709c2.719,41.723,40.816,64.399,87.976,59.408   c-9.976,15.881-3.172,31.754,8.616,44.44c-121.534,2.719-135.595,70.742-107.02,102.489c18.591,20.42,51.698,28.575,85.709,27.669   c40.355-0.453,82.538-14.515,101.583-41.73C312.006,350.549,322.88,316.99,274.369,280.26L274.369,280.26z M432.181,239.896   h-50.339v-48.073h-16.779v48.073h-52.15v16.334h52.15v47.604h16.779V256.23h50.339V239.896z M247.606,155.999   c11.343,29.028,9.077,63.04-21.771,72.563c-34.918,10.882-61.22-23.13-66.657-56.689c-4.086-24.49,1.813-48.526,25.396-56.689   C212.688,105.661,236.272,128.338,247.606,155.999L247.606,155.999z M136.501,339.659c6.352-33.105,46.706-41.714,93.873-41.714   c18.592,13.154,37.637,25.856,45.354,39.901c5.437,10.89,4.078,26.31-5.452,38.559c-11.78,14.498-31.739,19.951-50.784,21.311   c-35.371,1.813-64.853-12.249-77.546-28.122C135.142,360.532,134.236,350.096,136.501,339.659L136.501,339.659z"
-                                        fill="#FFFFFF" fill-rule="evenodd" />
-                                </g>
-                            </svg>
+        <section class="new-members">
+          <h3>new members</h3>
+          <div class="members-container">
+            <img
+              class="profile-image"
+              src="images/member-1.jpg"
+              alt="victoria chambers"
+            />
+            <div class="members-text">
+              <p>Victoria Chambers</p>
+              <a href="#">victoria.chambers80@example.com</a>
+            </div>
+            <p class="mem-date">10/15/15</p>
+          </div>
+          <div class="members-container">
+            <img
+              class="profile-image"
+              src="images/member-2.jpg"
+              alt="dale byrd"
+            />
+            <div class="members-text">
+              <p>Dale Byrd</p>
+              <a href="#">dale.byrd52@example.com</a>
+            </div>
+            <p class="mem-date">10/15/15</p>
+          </div>
+          <div class="members-container">
+            <img
+              class="profile-image"
+              src="images/member-3.jpg"
+              alt="dawn wood"
+            />
+            <div class="members-text">
+              <p>Dawn Wood</p>
+              <a href="#">dawn.wood16@example.com</a>
+            </div>
+            <p class="mem-date">10/15/15</p>
+          </div>
+          <div class="members-container">
+            <img
+              class="profile-image"
+              src="images/member-4.jpg"
+              alt="dan oliver"
+            />
+            <div class="members-text">
+              <p>Dan Oliver</p>
+              <a href="#">dan.oliver82@example.com</a>
+            </div>
+            <p class="mem-date">10/15/15</p>
+          </div>
+        </section>
+        <section class="recent">
+          <h3>recent activity</h3>
+          <div class="recent-container">
+            <img
+              class="profile-image"
+              src="images/member-1.jpg"
+              alt="victoria chambers"
+            />
+            <div class="recent-text">
+              <p>Victoria Chambers commented on YourApp's Seo tips</p>
+              <p>4 hours ago</p>
+            </div>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <div class="recent-container">
+            <img
+              class="profile-image"
+              src="images/member-2.jpg"
+              alt=" dale byrd"
+            />
+            <div class="recent-text">
+              <p>Dale Byrd like the post Facebook's Changes for 2020</p>
+              <p>5 hours ago</p>
+            </div>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <div class="recent-container">
+            <img
+              class="profile-image"
+              src="images/member-3.jpg"
+              alt="dawn wood"
+            />
+            <div class="recent-text">
+              <p>Dawn Wood commented on Facebook's Changes for 2020</p>
+              <p>5 hours ago</p>
+            </div>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <div class="recent-container">
+            <img
+              class="profile-image"
+              src="images/member-4.jpg"
+              alt="dan oliver"
+            />
+            <div class="recent-text">
+              <p>Dan Oliver posted YourApp's SEO Tips</p>
+              <p>1 day ago</p>
+            </div>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </section>
+        <section class="msg">
+          <h3 class="text-center">message user</h3>
+          <form class="widget-container flex-center">
+            <input
+              id="userField"
+              class="form-field"
+              type="text"
+              placeholder="Search for user"
+            />
+            <textarea
+              id="messageField"
+              class="form-area"
+              placeholder="Message for user"
+            ></textarea>
+            <button id="send" class="button-primary">Send</button>
+          </form>
+        </section>
+        <section class="settings">
+          <h3>settings</h3>
+          <div class="flex-center">
+            <div class="flex">
+              <div>
+                <p>Send Email Notification</p>
+              </div>
 
-                        </div>
-                        <div class="social-text">
-                            <p class="social-title">google+</p>
-                            <p>2,530</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+              <label class="switch">
+                <input type="checkbox" />
+                <div class="switch-btn"></div>
+              </label>
+            </div>
+            <div class="flex">
+              <div>
+                <p>Set Profile to Public</p>
+              </div>
 
-            <section class="new-members">
-                <h3>new members</h3>
-                <div class="members-container">
-                    <img class="profile-image" src="images/member-1.jpg" alt="victoria chambers">
-                    <div class="members-text">
-                        <p>Victoria Chambers</p>
-                        <a href="#">victoria.chambers80@example.com</a>
-                    </div>
-                    <p class="mem-date">10/15/15</p>
-                </div>
-                <div class="members-container">
-                    <img class="profile-image" src="images/member-2.jpg" alt="dale byrd">
-                    <div class="members-text">
-                        <p>Dale Byrd</p>
-                        <a href="#">dale.byrd52@example.com</a>
-                    </div>
-                    <p class="mem-date">10/15/15</p>
-                </div>
-                <div class="members-container">
-                    <img class="profile-image" src="images/member-3.jpg" alt="dawn wood">
-                    <div class="members-text">
-                        <p>Dawn Wood</p>
-                        <a href="#">dawn.wood16@example.com</a>
-                    </div>
-                    <p class="mem-date">10/15/15</p>
-                </div>
-                <div class="members-container">
-                    <img class="profile-image" src="images/member-4.jpg" alt="dan oliver">
-                    <div class="members-text">
-                        <p>Dan Oliver</p>
-                        <a href="#">dan.oliver82@example.com</a>
-                    </div>
-                    <p class="mem-date">10/15/15</p>
-                </div>
-            </section>
-            <section class="recent">
-                <h3>recent activity</h3>
-                <div class="recent-container">
-                    <img class="profile-image" src="images/member-1.jpg" alt="victoria chambers">
-                    <div class="recent-text">
-                        <p>Victoria Chambers commented on YourApp's Seo tips</p>
-                        <p>4 hours ago</p>
-                    </div>
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-                <div class="recent-container">
-                    <img class="profile-image" src="images/member-2.jpg" alt=" dale byrd">
-                    <div class="recent-text">
-                        <p>Dale Byrd like the post Facebook's Changes for 2020</p>
-                        <p>5 hours ago</p>
-                    </div>
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-                <div class="recent-container">
-                    <img class="profile-image" src="images/member-3.jpg" alt="dawn wood">
-                    <div class="recent-text">
-                        <p>Dawn Wood commented on Facebook's Changes for 2020</p>
-                        <p>5 hours ago</p>
-                    </div>
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-                <div class="recent-container">
-                    <img class="profile-image" src="images/member-4.jpg" alt="dan oliver">
-                    <div class="recent-text">
-                        <p>Dan Oliver posted YourApp's SEO Tips</p>
-                        <p>1 day ago</p>
-                    </div>
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </section>
-            <section class="msg">
-                <h3 class="text-center">message user</h3>
-                <form class="widget-container flex-center">
-                    <input id="userField" class="form-field" type="text" placeholder="Search for user">
-                    <textarea id="messageField" class="form-area" placeholder="Message for user"></textarea>
-                    <button id="send" class="button-primary">Send</button>
-                </form>
-            </section>
-            <section class="settings">
-
-                <h3>settings</h3>
-                <div class="flex-center">
-                    <div class="flex">
-                        <div>
-                            <p>Send Email Notification</p>
-                        </div>
-
-                        <label class="switch">
-                            <input type="checkbox">
-                            <div class="switch-btn"></div>
-                        </label>
-                    </div>
-                    <div class="flex">
-                        <div>
-                            <p>Set Profile to Public</p>
-                        </div>
-
-                        <label class="switch">
-                            <input type="checkbox">
-                            <div class="switch-btn"></div>
-                        </label>
-                    </div>
-                    <!-- custom css toggle code -->
-                    <select name="" id="timezone" class="form-field">
-                        <i class="fas fa-chevron-down"></i>
-                        <option disabled selected>Select a Timezone</option>
-                        <option>Eastern</option>
-                        <!-- more options -->
-                    </select>
-                    <div class="settings-button">
-                        <button id="save" class="button-primary">Save</button>
-                        <button id="cancel" class="button-disabled">Cancel</button>
-                    </div>
-                </div>
-
-
-            </section>
-        </main>
+              <label class="switch">
+                <input type="checkbox" />
+                <div class="switch-btn"></div>
+              </label>
+            </div>
+            <!-- custom css toggle code -->
+            <select name="" id="timezone" class="form-field">
+              <i class="fas fa-chevron-down"></i>
+              <option disabled selected>Select a Timezone</option>
+              <option>Eastern</option>
+              <!-- more options -->
+            </select>
+            <div class="settings-button">
+              <button id="save" class="button-primary">Save</button>
+              <button id="cancel" class="button-disabled">Cancel</button>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-
 
     <script src="mobileNav.js"></script>
     <script src="msg.js"></script>
     <script src="alert.js"></script>
     <script src="chart.js"></script>
-</body>
-
+  </body>
 </html>

@@ -23,7 +23,13 @@ header {
         }
     }
 
-    .profile {
-        width: 30px;
+    .bell{
+
+        .separater{
+            border-right: 1px solid gray;
+            height: 50px;
+            margin-right: 20px;
+        }
     }
+
 }
