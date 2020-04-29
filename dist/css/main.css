@@ -88,7 +88,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h3 {
@@ -149,11 +149,14 @@ canvas {
 .social-stats,
 .recent,
 .new-members,
-.msg {
+.msg,
+.settings {
   border-bottom: none;
 }
 
-.msg, .new-members, .daily-traffic {
+.msg,
+.new-members,
+.daily-traffic {
   border-right: none;
 }
 
@@ -591,7 +594,9 @@ main {
   .settings {
     grid-column: 2 / span 1;
   }
-  .msg, .new-members, .daily-traffic {
+  .msg,
+  .new-members,
+  .daily-traffic {
     border-right: thin solid grey;
   }
   .profile-image {
