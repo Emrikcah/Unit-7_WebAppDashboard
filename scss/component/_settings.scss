@@ -1,109 +1,102 @@
 .settings {
-    h3 {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    p {
-        margin-bottom: 10px;
-    }
-
-
-    label,
-    select,
-    button {
-        margin-bottom: 10px;
-    }
-
-    select {
-        background: $grayish;
-        padding: 9px;
-        border-radius: 5px;
-        display: block;
-    }
-
     
-        .flex {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-          
-        }
-    
+  h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
 
-    select,
-    .settings-button {
-        width: 250px;
-        margin-top: 10px;
+  p {
+    margin-bottom: 10px;
+  }
 
-        .button-primary,
-        .button-disabled {
-            @extend %btn;
-            width: 100%;
-        }
+  label,
+  select,
+  button {
+    margin-bottom: 10px;
+  }
 
-        .button-disabled {
-            background: grey;
-        }
+  select {
+    background: $grayish;
+    padding: 9px;
+    border-radius: 5px;
+    display: block;
+  }
 
-        .button-primary {
-            margin-right: 30px;
-        }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  select,
+  .settings-button {
+    width: 250px;
+    margin-top: 10px;
+
+    .button-primary,
+    .button-disabled {
+      @extend %btn;
+      width: 100%;
     }
 
-    .switch {
-
-        input[type=checkbox] {
-            display: none;
-        }
-
-        input[type=checkbox]:checked+.switch-btn:before {
-            left: 53px;
-        }
-
-        input[type=checkbox]:checked+.switch-btn {
-            background: $primary-color;
-        }
-
-        input[type=checkbox]:checked+.switch-btn:after {
-            content: 'ON';
-        }
-
-        .switch-btn {
-            position: absolute;
-            width: 80px;
-            height: 30px;
-            background: red;
-            position: relative;
-            border-radius: 20px;
-            cursor: pointer;
-            padding-bottom: 10px;
-
-            &:before {
-                content: "";
-                position: absolute;
-                width: 26px;
-                height: 26px;
-                background: $white;
-                left: 1px;
-                top: 2px;
-                border-radius: 50%;
-                transition: all 250ms ease-out;
-                z-index: 1;
-            }
-
-            &:after {
-                content: 'OFF';
-                position: absolute;
-                transform: translate(-50%, -50%);
-                top: 50%;
-                left: 50%;
-                font-size: 10px;
-
-            }
-           
-        }
-
+    .button-disabled {
+      background: grey;
     }
+
+    .button-primary {
+      margin-right: 30px;
+    }
+  }
+
+  .switch {
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + .switch-btn:before {
+      left: 53px;
+    }
+
+    input[type="checkbox"]:checked + .switch-btn {
+      background: $primary-color;
+    }
+
+    input[type="checkbox"]:checked + .switch-btn:after {
+      content: "ON";
+    }
+
+    .switch-btn {
+      position: absolute;
+      width: 80px;
+      height: 30px;
+      background: red;
+      position: relative;
+      border-radius: 20px;
+      cursor: pointer;
+      padding-bottom: 10px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background: $white;
+        left: 1px;
+        top: 2px;
+        border-radius: 50%;
+        transition: all 250ms ease-out;
+        z-index: 1;
+      }
+
+      &:after {
+        content: "OFF";
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        font-size: 10px;
+      }
+    }
+  }
 }
