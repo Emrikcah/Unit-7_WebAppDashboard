@@ -30,8 +30,6 @@ main {
   width: 85vw;
 }
 
-@media (min-width: 320px) {
-}
 
 //Adapt to different screen sizes
 @media (min-width: 768px) {
@@ -210,7 +208,7 @@ main {
 
   // Settings
   .settings {
-    // width: 80%;
+   
     h3 {
       text-align: left;
     }
@@ -224,12 +222,16 @@ main {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      // text-align: left;
+      margin-bottom: 30px;
 
       p {
         margin-right: 10px;
         // text-align: left;
       }
+    }
+
+    .form-field{
+        margin-top: 20px;
     }
 
     select,
