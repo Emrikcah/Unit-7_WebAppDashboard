@@ -502,20 +502,20 @@ nav img {
   margin-right: 30px;
 }
 
-.settings .switch input[type=checkbox] {
+.settings .switch input[type="checkbox"] {
   display: none;
 }
 
-.settings .switch input[type=checkbox]:checked + .switch-btn:before {
+.settings .switch input[type="checkbox"]:checked + .switch-btn:before {
   left: 53px;
 }
 
-.settings .switch input[type=checkbox]:checked + .switch-btn {
+.settings .switch input[type="checkbox"]:checked + .switch-btn {
   background: #7477bf;
 }
 
-.settings .switch input[type=checkbox]:checked + .switch-btn:after {
-  content: 'ON';
+.settings .switch input[type="checkbox"]:checked + .switch-btn:after {
+  content: "ON";
 }
 
 .settings .switch .switch-btn {
@@ -543,7 +543,7 @@ nav img {
 }
 
 .settings .switch .switch-btn:after {
-  content: 'OFF';
+  content: "OFF";
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -708,9 +708,13 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
   }
   .settings .flex p {
     margin-right: 10px;
+  }
+  .settings .form-field {
+    margin-top: 20px;
   }
   .settings select,
   .settings .settings-button {
