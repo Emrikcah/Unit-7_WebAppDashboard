@@ -502,6 +502,10 @@ nav img {
   margin-right: 30px;
 }
 
+.settings .switch span {
+  display: block;
+}
+
 .settings .switch input[type="checkbox"] {
   display: none;
 }
